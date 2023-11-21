@@ -6,25 +6,25 @@ class Animals:
     def __init__(self, name, age):
         self.name = name
         self.age = age
-    
+
     # creating a class method
-    # two ways to create a class method: 
-    # the first is to use the classmethod() function 
+    # two ways to create a class method:
+    # the first is to use the classmethod() function
     # the second method is to use @classmethod decorator
     #cls means referring to the class
     @classmethod
     def animals_home(cls, home):
         cls.home = home
-    
+
     #creating instance method
-    # Instance methods are used more often than class methods 
+    # Instance methods are used more often than class methods
     # because they can access both class and instance attributes
     def insta_method(self):
         # modifying the class attribute
         self.home = "jungle"
         return f'Name: {self.name}, Age: {self.age}, ' \
                f'Location: {self.home}'
-    
+
     #static methods cannot access class attributes or instance attributes
     @staticmethod
     def check_age(age):
